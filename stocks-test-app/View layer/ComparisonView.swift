@@ -24,6 +24,8 @@ struct ComparisonView: View {
             let size = geometry.size
             
             VStack {
+                Spacer()
+                    .frame(height: 15)
                 HStack {
                     Spacer()
                         .frame(width: size.width * 0.05)
@@ -50,6 +52,41 @@ struct ComparisonView: View {
                         }
                     }
                     .frame(height: size.height * 0.8)
+                Spacer()
+                    .frame(height: size.height * 0.01)
+                
+                
+                HStack(spacing: size.width * 0.02) {
+                    let size = geometry.size
+                    
+                    Spacer()
+                    Button {
+#warning("Configure action")
+                    } label: {
+                        Text("Monthly chart")
+                            .padding(15)
+                            .background(Color.blue)
+                            .foregroundColor(Color.white)
+                            .cornerRadius(size.height * 0.5)
+                            .frame(width: size.width * 0.4, height: size.height * 0.05)
+                    }
+                    
+                    Button {
+#warning("Configure action")
+                    } label: {
+                        Text("Weekly chart")
+                            .padding(15)
+                            .background(Color.blue)
+                            .foregroundColor(Color.white)
+                            .cornerRadius(size.height * 0.5)
+                            .frame(width: size.width * 0.4, height: size.height * 0.05)
+                    }
+                    
+                    Spacer()
+                }
+                
+                Spacer()
+                    .frame(height: 15)
             }
         }
         .onAppear {
