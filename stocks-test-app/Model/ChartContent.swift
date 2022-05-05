@@ -1,25 +1,24 @@
 //
-//  stocks_test_appApp.swift
+//  ChartContent.swift
 //  stocks-test-app
 //
 //  Created by vladimir.kuzomenskyi on 05.05.2022.
 //
 
-import SwiftUI
+import Foundation
 
-@main
-struct stocks_test_appApp: App {
+struct ChartContent {
     // MARK: Constant
     
     // MARK: Private Constant
     
     // MARK: Variable
+    var title: String = ""
+    var subtitle: String = ""
+    var tooltipValueSuffix = "USD"
+    var quoteSymbols: [QuoteSymbol] = []
     
-    var body: some Scene {
-        WindowGroup {
-            ComparisonView(monthChartContent: ChartContent(), weekChartContent: ChartContent())
-        }
-    }
+    lazy var categories: [String] = DateManager.shared.getMonthsTitles()
     
     // MARK: Private Variable
     

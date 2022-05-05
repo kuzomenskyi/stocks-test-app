@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1EBF517EB06A98F58D2DC667 /* Pods_stocks_test_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CBEE2F33F5E2B5ECF79A252 /* Pods_stocks_test_app.framework */; };
+		C35EC35C282441C10072A917 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35EC35B282441C10072A917 /* ChartView.swift */; };
+		C35EC35E2824475D0072A917 /* ChartContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35EC35D2824475D0072A917 /* ChartContent.swift */; };
+		C35EC36028244A360072A917 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35EC35F28244A360072A917 /* Date+Ext.swift */; };
+		C35EC36228244AB70072A917 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35EC36128244AB70072A917 /* DateManager.swift */; };
 		C3693A072823F55500E27A02 /* ResponseQuotesWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3693A062823F55500E27A02 /* ResponseQuotesWeek.swift */; };
 		C3693A092823F57900E27A02 /* ResponseQuotesMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3693A082823F57900E27A02 /* ResponseQuotesMonth.swift */; };
 		C3693A0B2823F59A00E27A02 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3693A0A2823F59A00E27A02 /* Content.swift */; };
@@ -15,14 +19,20 @@
 		C3693A112823F5F400E27A02 /* QuotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3693A102823F5F400E27A02 /* QuotesManager.swift */; };
 		C3693A142824163F00E27A02 /* responseQuotesMonth.json in Resources */ = {isa = PBXBuildFile; fileRef = C3693A122824163F00E27A02 /* responseQuotesMonth.json */; };
 		C3693A152824163F00E27A02 /* responseQuotesWeek.json in Resources */ = {isa = PBXBuildFile; fileRef = C3693A132824163F00E27A02 /* responseQuotesWeek.json */; };
+		C3693A192824376400E27A02 /* ComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3693A182824376400E27A02 /* ComparisonView.swift */; };
 		C3CF9F9E2823DB85000BC1E0 /* stocks_test_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CF9F9D2823DB85000BC1E0 /* stocks_test_appApp.swift */; };
 		C3CF9FA22823DB87000BC1E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3CF9FA12823DB87000BC1E0 /* Assets.xcassets */; };
 		C3CF9FA52823DB87000BC1E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3CF9FA42823DB87000BC1E0 /* Preview Assets.xcassets */; };
+		C3EB9D8D28245FD200D97F67 /* Notification.Name+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EB9D8C28245FD200D97F67 /* Notification.Name+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		37E8EB67D19F3E31BAE8484A /* Pods-stocks-test-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stocks-test-app.debug.xcconfig"; path = "Target Support Files/Pods-stocks-test-app/Pods-stocks-test-app.debug.xcconfig"; sourceTree = "<group>"; };
 		9CBEE2F33F5E2B5ECF79A252 /* Pods_stocks_test_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stocks_test_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C35EC35B282441C10072A917 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		C35EC35D2824475D0072A917 /* ChartContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartContent.swift; sourceTree = "<group>"; };
+		C35EC35F28244A360072A917 /* Date+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		C35EC36128244AB70072A917 /* DateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 		C3693A062823F55500E27A02 /* ResponseQuotesWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseQuotesWeek.swift; sourceTree = "<group>"; };
 		C3693A082823F57900E27A02 /* ResponseQuotesMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseQuotesMonth.swift; sourceTree = "<group>"; };
 		C3693A0A2823F59A00E27A02 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
@@ -30,10 +40,12 @@
 		C3693A102823F5F400E27A02 /* QuotesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesManager.swift; sourceTree = "<group>"; };
 		C3693A122824163F00E27A02 /* responseQuotesMonth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = responseQuotesMonth.json; path = "stocks-test-app/Resources/responseQuotesMonth.json"; sourceTree = SOURCE_ROOT; };
 		C3693A132824163F00E27A02 /* responseQuotesWeek.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = responseQuotesWeek.json; path = "stocks-test-app/Resources/responseQuotesWeek.json"; sourceTree = SOURCE_ROOT; };
+		C3693A182824376400E27A02 /* ComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparisonView.swift; sourceTree = "<group>"; };
 		C3CF9F9A2823DB85000BC1E0 /* stocks-test-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "stocks-test-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3CF9F9D2823DB85000BC1E0 /* stocks_test_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stocks_test_appApp.swift; sourceTree = "<group>"; };
 		C3CF9FA12823DB87000BC1E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3CF9FA42823DB87000BC1E0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C3EB9D8C28245FD200D97F67 /* Notification.Name+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification.Name+Ext.swift"; sourceTree = "<group>"; };
 		E8CEA8F222624C17F784BB5C /* Pods-stocks-test-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stocks-test-app.release.xcconfig"; path = "Target Support Files/Pods-stocks-test-app/Pods-stocks-test-app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +84,7 @@
 				C3693A082823F57900E27A02 /* ResponseQuotesMonth.swift */,
 				C3693A0A2823F59A00E27A02 /* Content.swift */,
 				C3693A0C2823F5B100E27A02 /* QuoteSymbol.swift */,
+				C35EC35D2824475D0072A917 /* ChartContent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -79,6 +92,8 @@
 		C36939FC2823DFE500E27A02 /* View layer */ = {
 			isa = PBXGroup;
 			children = (
+				C3693A182824376400E27A02 /* ComparisonView.swift */,
+				C35EC35B282441C10072A917 /* ChartView.swift */,
 			);
 			path = "View layer";
 			sourceTree = "<group>";
@@ -86,6 +101,8 @@
 		C36939FD2823DFEB00E27A02 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C35EC35F28244A360072A917 /* Date+Ext.swift */,
+				C3EB9D8C28245FD200D97F67 /* Notification.Name+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -101,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				C3693A102823F5F400E27A02 /* QuotesManager.swift */,
+				C35EC36128244AB70072A917 /* DateManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -184,6 +202,7 @@
 				C3CF9F962823DB85000BC1E0 /* Sources */,
 				C3CF9F972823DB85000BC1E0 /* Frameworks */,
 				C3CF9F982823DB85000BC1E0 /* Resources */,
+				429D4276C3D09EEB92CBE602 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -242,6 +261,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		429D4276C3D09EEB92CBE602 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-stocks-test-app/Pods-stocks-test-app-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-stocks-test-app/Pods-stocks-test-app-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-stocks-test-app/Pods-stocks-test-app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5804C822BCCC68741390F408 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -271,12 +307,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3EB9D8D28245FD200D97F67 /* Notification.Name+Ext.swift in Sources */,
+				C3693A192824376400E27A02 /* ComparisonView.swift in Sources */,
 				C3693A092823F57900E27A02 /* ResponseQuotesMonth.swift in Sources */,
 				C3693A0D2823F5B100E27A02 /* QuoteSymbol.swift in Sources */,
+				C35EC35E2824475D0072A917 /* ChartContent.swift in Sources */,
 				C3CF9F9E2823DB85000BC1E0 /* stocks_test_appApp.swift in Sources */,
 				C3693A072823F55500E27A02 /* ResponseQuotesWeek.swift in Sources */,
 				C3693A112823F5F400E27A02 /* QuotesManager.swift in Sources */,
+				C35EC36228244AB70072A917 /* DateManager.swift in Sources */,
 				C3693A0B2823F59A00E27A02 /* Content.swift in Sources */,
+				C35EC35C282441C10072A917 /* ChartView.swift in Sources */,
+				C35EC36028244A360072A917 /* Date+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
