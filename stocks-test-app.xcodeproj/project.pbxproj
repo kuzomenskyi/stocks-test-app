@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1EBF517EB06A98F58D2DC667 /* Pods_stocks_test_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CBEE2F33F5E2B5ECF79A252 /* Pods_stocks_test_app.framework */; };
 		C3CF9F9E2823DB85000BC1E0 /* stocks_test_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CF9F9D2823DB85000BC1E0 /* stocks_test_appApp.swift */; };
-		C3CF9FA02823DB85000BC1E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CF9F9F2823DB85000BC1E0 /* ContentView.swift */; };
 		C3CF9FA22823DB87000BC1E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3CF9FA12823DB87000BC1E0 /* Assets.xcassets */; };
 		C3CF9FA52823DB87000BC1E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3CF9FA42823DB87000BC1E0 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -19,7 +18,6 @@
 		9CBEE2F33F5E2B5ECF79A252 /* Pods_stocks_test_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stocks_test_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3CF9F9A2823DB85000BC1E0 /* stocks-test-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "stocks-test-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3CF9F9D2823DB85000BC1E0 /* stocks_test_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stocks_test_appApp.swift; sourceTree = "<group>"; };
-		C3CF9F9F2823DB85000BC1E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C3CF9FA12823DB87000BC1E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3CF9FA42823DB87000BC1E0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E8CEA8F222624C17F784BB5C /* Pods-stocks-test-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stocks-test-app.release.xcconfig"; path = "Target Support Files/Pods-stocks-test-app/Pods-stocks-test-app.release.xcconfig"; sourceTree = "<group>"; };
@@ -45,6 +43,64 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C36939FA2823DFC600E27A02 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				C3CF9F9D2823DB85000BC1E0 /* stocks_test_appApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		C36939FB2823DFDF00E27A02 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C36939FC2823DFE500E27A02 /* View layer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View layer";
+			sourceTree = "<group>";
+		};
+		C36939FD2823DFEB00E27A02 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C36939FE2823DFF200E27A02 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		C36939FF2823DFF800E27A02 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		C3693A002823E00A00E27A02 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C3693A012823E03500E27A02 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C3CF9FA12823DB87000BC1E0 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		C3CF9F912823DB85000BC1E0 = {
 			isa = PBXGroup;
 			children = (
@@ -66,9 +122,14 @@
 		C3CF9F9C2823DB85000BC1E0 /* stocks-test-app */ = {
 			isa = PBXGroup;
 			children = (
-				C3CF9F9D2823DB85000BC1E0 /* stocks_test_appApp.swift */,
-				C3CF9F9F2823DB85000BC1E0 /* ContentView.swift */,
-				C3CF9FA12823DB87000BC1E0 /* Assets.xcassets */,
+				C36939FA2823DFC600E27A02 /* Application */,
+				C36939FE2823DFF200E27A02 /* Utilities */,
+				C36939FD2823DFEB00E27A02 /* Extensions */,
+				C36939FB2823DFDF00E27A02 /* Model */,
+				C36939FC2823DFE500E27A02 /* View layer */,
+				C3693A002823E00A00E27A02 /* Helpers */,
+				C36939FF2823DFF800E27A02 /* Managers */,
+				C3693A012823E03500E27A02 /* Resources */,
 				C3CF9FA32823DB87000BC1E0 /* Preview Content */,
 			);
 			path = "stocks-test-app";
@@ -88,7 +149,6 @@
 				37E8EB67D19F3E31BAE8484A /* Pods-stocks-test-app.debug.xcconfig */,
 				E8CEA8F222624C17F784BB5C /* Pods-stocks-test-app.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -188,7 +248,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3CF9FA02823DB85000BC1E0 /* ContentView.swift in Sources */,
 				C3CF9F9E2823DB85000BC1E0 /* stocks_test_appApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
