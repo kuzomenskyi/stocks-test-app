@@ -48,7 +48,6 @@ struct ChartView: UIViewRepresentable {
     
     static func getSeries(forChartContent chartContent: ChartContent) -> [AASeriesElement] {
         let data = chartContent.stocksData
-        print("data:", data.count)
         
         let series = chartContent.quoteSymbols.map { quoteSymbol -> AASeriesElement in
             let element = AASeriesElement()
