@@ -10,45 +10,69 @@ import AAInfographics
 
 struct ComparisonView: View {
     // MARK: Constant
-    @State var monthChartContent: ChartContent
     @State var weekChartContent: ChartContent
     @State var isErrorAlertDisplayed = false
     @State var errorMessage = ""
+    @State var monthChartContent: ChartContent
     
     // MARK: Private Constant
     private let quotesManager = QuotesManager()
     
     // MARK: Variable
     var body: some View {
-        ChartView(chartContent: $monthChartContent, chartModel: .constant(ChartView.getChartModel(forChartContent: monthChartContent)))
-            .subscribeForUpdates()
-            .onAppear {
-                quotesManager.getMonthQuotes { monthQuotes in
-                    monthChartContent.quoteSymbols = monthQuotes.content.quoteSymbols
-                    monthChartContent.title = DateManager.shared.getMonthTitle(fromDate: Date())
-                    monthChartContent.subtitle = "Monthly view"
-                    monthChartContent.categories = []
-
-                    if monthChartContent.quoteSymbols.count > 0 {
-                        var categories = [String]()
-                        for day in 1...monthChartContent.quoteSymbols.count {
-                            categories.append("\(day)")
-                        }
-                        
-                        monthChartContent.categories = categories
+        GeometryReader { geometry in
+            let size = geometry.size
+            
+            VStack {
+                HStack {
+                    Spacer()
+                        .frame(width: size.width * 0.05)
+                    Toggle(isOn: Binding(get: {
+                        return monthChartContent.stockDisplayMode == .performancePercentages
+                    }, set: { newValue in
+                        print("newValue:", newValue)
+                        monthChartContent.stockDisplayMode = newValue ? .performancePercentages : .openPrices
+                        NotificationCenter.default.post(name: .didFetchMonthQuotes, object: self)
+                    })) {
+                        Text("Display performance percentage")
                     }
-                    NotificationCenter.default.post(name: .didFetchMonthQuotes, object: self)
-                } failureCompletion: { error in
-                    errorMessage = error.localizedDescription
-                    isErrorAlertDisplayed.toggle()
+                    Spacer()
+                        .frame(width: size.width * 0.05)
                 }
+                
+                Spacer()
+                    .frame(height: 15)
+                ChartView(chartContent: $monthChartContent, chartModel: .constant(ChartView.getChartModel(forChartContent: monthChartContent)))
+                    .subscribeForUpdates()
+                    .alert(errorMessage, isPresented: $isErrorAlertDisplayed) {
+                        Button("OK") {
+                            // alert get's dismissed by tap on the button
+                        }
+                    }
+                    .frame(height: size.height * 0.8)
             }
-            .alert(errorMessage, isPresented: $isErrorAlertDisplayed) {
-                Button("OK") {
-                    // alert get's dismissed by tap on the button
+        }
+        .onAppear {
+            quotesManager.getMonthQuotes { monthQuotes in
+                monthChartContent.quoteSymbols = monthQuotes.content.quoteSymbols
+                monthChartContent.title = DateManager.shared.getMonthTitle(fromDate: Date())
+                monthChartContent.subtitle = "Last month view"
+                monthChartContent.categories = []
+
+                if monthChartContent.quoteSymbols.count > 0 {
+                    var categories = [String]()
+                    for day in 1...monthChartContent.quoteSymbols.count {
+                        categories.append("\(day)")
+                    }
+                    
+                    monthChartContent.categories = categories
                 }
+                NotificationCenter.default.post(name: .didFetchMonthQuotes, object: self)
+            } failureCompletion: { error in
+                errorMessage = error.localizedDescription
+                isErrorAlertDisplayed.toggle()
             }
-        
+        }
         #warning("Add week ChartView")
     }
     
@@ -67,6 +91,6 @@ struct ComparisonView: View {
 
 struct ComparisonView_Previews: PreviewProvider {
     static var previews: some View {
-        ComparisonView(monthChartContent: ChartContent(), weekChartContent: ChartContent())
+        ComparisonView(weekChartContent: ChartContent(), monthChartContent: ChartContent())
     }
 }

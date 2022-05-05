@@ -31,10 +31,10 @@ class ChartContent: ObservableObject {
     var stocksData: [Any] {
         switch stockDisplayMode {
         case .openPrices:
-            let output = quoteSymbols.first?.opens ?? []
+            let output = quoteSymbols.last?.opens ?? []
             return output
         case .performancePercentages:
-            let output = quoteSymbols.first?.opensPerformance ?? []
+            let output = quoteSymbols.last?.opensPerformance ?? []
             return output
         }
     }

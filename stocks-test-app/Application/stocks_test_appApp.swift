@@ -17,10 +17,9 @@ struct stocks_test_appApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ComparisonView(monthChartContent:
+            ComparisonView(weekChartContent: ChartContent(), monthChartContent:
                             ChartContent()
-                            .stockDisplayMode(.openPrices),
-                           weekChartContent: ChartContent())
+                            .stockDisplayMode(.openPrices))
         }
     }
     

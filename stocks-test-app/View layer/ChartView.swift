@@ -93,6 +93,7 @@ struct ChartView: UIViewRepresentable {
     func subscribeForUpdates() -> ChartView {
         NotificationCenter.default.addObserver(forName: .didFetchMonthQuotes, object: nil, queue: .main) { _ in
             configureChartModel()
+            chart.aa_drawChartWithChartModel(chartModel)
         }
         return self
     }
