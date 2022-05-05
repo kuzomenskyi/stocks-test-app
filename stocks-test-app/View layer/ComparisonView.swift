@@ -14,6 +14,7 @@ struct ComparisonView: View {
     @State var isErrorAlertDisplayed = false
     @State var errorMessage = ""
     @State var monthChartContent: ChartContent
+    @State var isMonthViewDisplayed = true
     
     // MARK: Private Constant
     private let quotesManager = QuotesManager()
@@ -30,10 +31,21 @@ struct ComparisonView: View {
                     Spacer()
                         .frame(width: size.width * 0.05)
                     Toggle(isOn: Binding(get: {
-                        return monthChartContent.stockDisplayMode == .performancePercentages
+                        var content: ChartContent {
+                            if isMonthViewDisplayed {
+                                return monthChartContent
+                            } else {
+                                return weekChartContent
+                            }
+                        }
+                        
+                        return content.stockDisplayMode == .performancePercentages
                     }, set: { newValue in
-                        print("newValue:", newValue)
-                        monthChartContent.stockDisplayMode = newValue ? .performancePercentages : .openPrices
+                        if isMonthViewDisplayed {
+                            monthChartContent.stockDisplayMode = newValue ? .performancePercentages : .openPrices
+                        } else {
+                            weekChartContent.stockDisplayMode = newValue ? .performancePercentages : .openPrices
+                        }
                         NotificationCenter.default.post(name: .didFetchMonthQuotes, object: self)
                     })) {
                         Text("Display performance percentage")
@@ -44,14 +56,25 @@ struct ComparisonView: View {
                 
                 Spacer()
                     .frame(height: 15)
-                ChartView(chartContent: $monthChartContent, chartModel: .constant(ChartView.getChartModel(forChartContent: monthChartContent)))
-                    .subscribeForUpdates()
-                    .alert(errorMessage, isPresented: $isErrorAlertDisplayed) {
-                        Button("OK") {
-                            // alert get's dismissed by tap on the button
+                if isMonthViewDisplayed {
+                    ChartView(chartContent: $monthChartContent, chartModel: .constant(ChartView.getChartModel(forChartContent: monthChartContent)))
+                        .subscribeForUpdates()
+                        .alert(errorMessage, isPresented: $isErrorAlertDisplayed) {
+                            Button("OK") {
+                                // alert get's dismissed by tap on the button
+                            }
                         }
-                    }
-                    .frame(height: size.height * 0.8)
+                        .frame(height: size.height * 0.8)
+                } else {
+                    ChartView(chartContent: $weekChartContent, chartModel: .constant(ChartView.getChartModel(forChartContent: weekChartContent)))
+                        .subscribeForUpdates()
+                        .alert(errorMessage, isPresented: $isErrorAlertDisplayed) {
+                            Button("OK") {
+                                // alert get's dismissed by tap on the button
+                            }
+                        }
+                        .frame(height: size.height * 0.8)
+                }
                 Spacer()
                     .frame(height: size.height * 0.01)
                 
@@ -61,7 +84,7 @@ struct ComparisonView: View {
                     
                     Spacer()
                     Button {
-#warning("Configure action")
+                        isMonthViewDisplayed = true
                     } label: {
                         Text("Monthly chart")
                             .padding(15)
@@ -72,7 +95,7 @@ struct ComparisonView: View {
                     }
                     
                     Button {
-#warning("Configure action")
+                        isMonthViewDisplayed = false
                     } label: {
                         Text("Weekly chart")
                             .padding(15)
@@ -109,6 +132,22 @@ struct ComparisonView: View {
                 errorMessage = error.localizedDescription
                 isErrorAlertDisplayed.toggle()
             }
+            
+            quotesManager.getWeekQuotes { quotes in
+                weekChartContent.quoteSymbols = quotes.content.quoteSymbols
+                
+                weekChartContent.title = "Week"
+                weekChartContent.subtitle = "Week view"
+                
+                let categories = DateManager.shared.getDayTitles(forFirstDayOfWeek: .sunday)
+                weekChartContent.categories = categories
+                
+                NotificationCenter.default.post(name: .didFetchMonthQuotes, object: self)
+            } failureCompletion: { error in
+                errorMessage = error.localizedDescription
+                isErrorAlertDisplayed.toggle()
+            }
+
         }
         #warning("Add week ChartView")
     }

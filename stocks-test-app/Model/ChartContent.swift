@@ -29,13 +29,22 @@ class ChartContent: ObservableObject {
     var categories: [String] = []
     
     var stocksData: [Any] {
-        switch stockDisplayMode {
-        case .openPrices:
-            let output = quoteSymbols.last?.opens ?? []
+        var output: [Any] {
+            switch stockDisplayMode {
+            case .openPrices:
+                let output = quoteSymbols.last?.opens ?? []
+                return output
+            case .performancePercentages:
+                let output = quoteSymbols.last?.opensPerformance ?? []
+                return output
+            }
+        }
+        
+        if mode == .monthView {
             return output
-        case .performancePercentages:
-            let output = quoteSymbols.last?.opensPerformance ?? []
-            return output
+        } else {
+            // cutting out all other data than for single week, as requested by client
+            return output.chunked(into: 7).first ?? []
         }
     }
     
@@ -61,6 +70,12 @@ class ChartContent: ObservableObject {
     @discardableResult
     func stockDisplayMode(_ mode: ChartContent.StocksDisplayMode) -> ChartContent {
         self.stockDisplayMode = mode
+        return self
+    }
+    
+    @discardableResult
+    func mode(_ mode: ChartContent.Mode) -> ChartContent {
+        self.mode = mode
         return self
     }
     

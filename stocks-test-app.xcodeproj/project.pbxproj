@@ -40,6 +40,7 @@
 		C3EB9DAB282478CC00D97F67 /* PercentageCalculator.swift in Resources */ = {isa = PBXBuildFile; fileRef = C3EB9D92282477A900D97F67 /* PercentageCalculator.swift */; };
 		C3EB9DAC282478CC00D97F67 /* responseQuotesMonth.json in Resources */ = {isa = PBXBuildFile; fileRef = C3693A122824163F00E27A02 /* responseQuotesMonth.json */; };
 		C3EB9DAD282478CC00D97F67 /* responseQuotesWeek.json in Resources */ = {isa = PBXBuildFile; fileRef = C3693A132824163F00E27A02 /* responseQuotesWeek.json */; };
+		C3EB9DAF282497F200D97F67 /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EB9DAE282497F200D97F67 /* Array+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		C3EB9D92282477A900D97F67 /* PercentageCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentageCalculator.swift; sourceTree = "<group>"; };
 		C3EB9D98282478B500D97F67 /* stocks-test-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "stocks-test-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3EB9D9A282478B500D97F67 /* stocks_test_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stocks_test_appTests.swift; sourceTree = "<group>"; };
+		C3EB9DAE282497F200D97F67 /* Array+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
 		E8CEA8F222624C17F784BB5C /* Pods-stocks-test-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stocks-test-app.release.xcconfig"; path = "Target Support Files/Pods-stocks-test-app/Pods-stocks-test-app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				C35EC35F28244A360072A917 /* Date+Ext.swift */,
+				C3EB9DAE282497F200D97F67 /* Array+Ext.swift */,
 				C3EB9D8C28245FD200D97F67 /* Notification.Name+Ext.swift */,
 			);
 			path = Extensions;
@@ -411,6 +414,7 @@
 				C3693A112823F5F400E27A02 /* QuotesManager.swift in Sources */,
 				C35EC36228244AB70072A917 /* DateManager.swift in Sources */,
 				C3693A0B2823F59A00E27A02 /* Content.swift in Sources */,
+				C3EB9DAF282497F200D97F67 /* Array+Ext.swift in Sources */,
 				C35EC35C282441C10072A917 /* ChartView.swift in Sources */,
 				C35EC36028244A360072A917 /* Date+Ext.swift in Sources */,
 			);
