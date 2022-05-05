@@ -24,6 +24,7 @@
 		C3CF9FA22823DB87000BC1E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3CF9FA12823DB87000BC1E0 /* Assets.xcassets */; };
 		C3CF9FA52823DB87000BC1E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3CF9FA42823DB87000BC1E0 /* Preview Assets.xcassets */; };
 		C3EB9D8D28245FD200D97F67 /* Notification.Name+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EB9D8C28245FD200D97F67 /* Notification.Name+Ext.swift */; };
+		C3EB9D912824694F00D97F67 /* RandomColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EB9D902824694F00D97F67 /* RandomColorGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		C3CF9FA12823DB87000BC1E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3CF9FA42823DB87000BC1E0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C3EB9D8C28245FD200D97F67 /* Notification.Name+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification.Name+Ext.swift"; sourceTree = "<group>"; };
+		C3EB9D902824694F00D97F67 /* RandomColorGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomColorGenerator.swift; sourceTree = "<group>"; };
 		E8CEA8F222624C17F784BB5C /* Pods-stocks-test-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stocks-test-app.release.xcconfig"; path = "Target Support Files/Pods-stocks-test-app/Pods-stocks-test-app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +121,7 @@
 			children = (
 				C3693A102823F5F400E27A02 /* QuotesManager.swift */,
 				C35EC36128244AB70072A917 /* DateManager.swift */,
+				C3EB9D902824694F00D97F67 /* RandomColorGenerator.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				C3693A0D2823F5B100E27A02 /* QuoteSymbol.swift in Sources */,
 				C35EC35E2824475D0072A917 /* ChartContent.swift in Sources */,
 				C3CF9F9E2823DB85000BC1E0 /* stocks_test_appApp.swift in Sources */,
+				C3EB9D912824694F00D97F67 /* RandomColorGenerator.swift in Sources */,
 				C3693A072823F55500E27A02 /* ResponseQuotesWeek.swift in Sources */,
 				C3693A112823F5F400E27A02 /* QuotesManager.swift in Sources */,
 				C35EC36228244AB70072A917 /* DateManager.swift in Sources */,

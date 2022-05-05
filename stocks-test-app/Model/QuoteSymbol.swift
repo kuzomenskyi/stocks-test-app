@@ -38,6 +38,8 @@ struct QuoteSymbol: Codable {
     
     // MARK: Function
     init(from decoder: Decoder) throws {
+        self.colorHexString = RandomColorGenerator.shared.generateRandomColor()
+        
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.symbol = try container.decodeIfPresent(String.self, forKey: .symbol) ?? ""
         self.timestamps = try container.decodeIfPresent([Int].self, forKey: .timestamps) ?? []

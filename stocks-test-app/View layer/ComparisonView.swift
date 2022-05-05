@@ -19,7 +19,7 @@ struct ComparisonView: View {
     
     // MARK: Variable
     var body: some View {
-        ChartView(chartContent: $monthChartContent)
+        ChartView(chartContent: $monthChartContent, chartModel: .constant(ChartView.getChartModel(forChartContent: monthChartContent)))
             .subscribeForUpdates()
             .onAppear {
                 print("Appeared")

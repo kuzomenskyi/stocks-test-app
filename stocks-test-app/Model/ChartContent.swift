@@ -7,17 +7,21 @@
 
 import Foundation
 
-struct ChartContent {
+class ChartContent: ObservableObject {
+    enum Mode {
+        case monthView, weekView
+    }
     // MARK: Constant
     
     // MARK: Private Constant
     
     // MARK: Variable
-    var title: String = ""
-    var subtitle: String = ""
-    var tooltipValueSuffix = "USD"
-    var quoteSymbols: [QuoteSymbol] = []
-    
+    @Published var mode: ChartContent.Mode = .monthView
+    @Published var title: String = ""
+    @Published var subtitle: String = ""
+    @Published var tooltipValueSuffix = "USD"
+    @Published var quoteSymbols: [QuoteSymbol] = []
+
     lazy var categories: [String] = DateManager.shared.getMonthsTitles()
     
     // MARK: Private Variable

@@ -16,7 +16,7 @@ struct ChartView: UIViewRepresentable {
     
     // MARK: Variable
     @Binding var chartContent: ChartContent
-    @State var chartModel = AAChartModel()
+    @Binding var chartModel: AAChartModel
     var chart = AAChartView()
     
     // MARK: Private Variable
@@ -28,27 +28,58 @@ struct ChartView: UIViewRepresentable {
     // MARK: Private Action
     
     // MARK: Function
-    func makeUIView(context: Context) -> some UIView {
-        chart.aa_drawChartWithChartModel(chartModel)
-        return chart
-    }
-    
-    func updateUIView(_ uiView: UIViewType, context: Context) {
-        let series = getSeries()
-        chart.aa_onlyRefreshTheChartDataWithChartModelSeries(series)
-    }
-    
-    @discardableResult
-    func configureChartModel() -> ChartView {
+    static func getChartModel(forChartContent chartContent: ChartContent) -> AAChartModel {
         let colorHexStrings = chartContent.quoteSymbols.map { $0.colorHexString }
-        let series = getSeries()
+        let series = ChartView.getSeries(forChartContent: chartContent)
         
-        chartModel
+        let model = AAChartModel()
             .chartType(.column)
             .animationType(.bounce)
             .title(chartContent.title)
             .subtitle(chartContent.subtitle)
             .dataLabelsEnabled(true)
+            .tooltipValueSuffix(chartContent.tooltipValueSuffix)
+            .categories(chartContent.categories)
+            .colorsTheme(colorHexStrings)
+            .series(series)
+        
+        return model
+    }
+    
+    static func getSeries(forChartContent chartContent: ChartContent) -> [AASeriesElement] {
+        let series = chartContent.quoteSymbols.map { quoteSymbol -> AASeriesElement in
+            let element = AASeriesElement()
+                .name(quoteSymbol.symbol)
+                .data(quoteSymbol.volumes)
+            return element
+        }
+        return series
+    }
+    
+    func makeUIView(context: Context) -> some UIView {
+        configureChartModel()
+        chart.aa_drawChartWithChartModel(chartModel)
+        return chart
+    }
+    
+    func updateUIView(_ uiView: UIViewType, context: Context) {
+        let colorHexStrings = chartContent.quoteSymbols.map { $0.colorHexString }
+        print("colorHexStrings:", colorHexStrings)
+        configureChartModel()
+        chart.aa_drawChartWithChartModel(chartModel)
+    }
+    
+    @discardableResult
+    func configureChartModel() -> ChartView {
+        let colorHexStrings = chartContent.quoteSymbols.map { $0.colorHexString }
+        let series = ChartView.getSeries(forChartContent: chartContent)
+        
+        chartModel = chartModel
+            .chartType(.column)
+            .animationType(.bounce)
+            .title(chartContent.title)
+            .subtitle(chartContent.subtitle)
+            .dataLabelsEnabled(false)
             .tooltipValueSuffix(chartContent.tooltipValueSuffix)
             .categories(chartContent.categories)
             .colorsTheme(colorHexStrings)
@@ -63,16 +94,6 @@ struct ChartView: UIViewRepresentable {
             configureChartModel()
         }
         return self
-    }
-    
-    func getSeries() -> [AASeriesElement] {
-        let series = chartContent.quoteSymbols.map { quoteSymbol -> AASeriesElement in
-            let element = AASeriesElement()
-                .name(quoteSymbol.symbol)
-                .data(quoteSymbol.volumes)
-            return element
-        }
-        return series
     }
     
     // MARK: Private Function
