@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1EBF517EB06A98F58D2DC667 /* Pods_stocks_test_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CBEE2F33F5E2B5ECF79A252 /* Pods_stocks_test_app.framework */; };
+		C3693A042823F4FA00E27A02 /* responseQuotesMonth .json in Resources */ = {isa = PBXBuildFile; fileRef = C3693A022823F4FA00E27A02 /* responseQuotesMonth .json */; };
+		C3693A052823F4FA00E27A02 /* responseQuotesWeek.json in Resources */ = {isa = PBXBuildFile; fileRef = C3693A032823F4FA00E27A02 /* responseQuotesWeek.json */; };
+		C3693A072823F55500E27A02 /* ResponseQuotesWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3693A062823F55500E27A02 /* ResponseQuotesWeek.swift */; };
+		C3693A092823F57900E27A02 /* ResponseQuotesMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3693A082823F57900E27A02 /* ResponseQuotesMonth.swift */; };
+		C3693A0B2823F59A00E27A02 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3693A0A2823F59A00E27A02 /* Content.swift */; };
+		C3693A0D2823F5B100E27A02 /* QuoteSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3693A0C2823F5B100E27A02 /* QuoteSymbol.swift */; };
+		C3693A112823F5F400E27A02 /* QuotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3693A102823F5F400E27A02 /* QuotesManager.swift */; };
 		C3CF9F9E2823DB85000BC1E0 /* stocks_test_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CF9F9D2823DB85000BC1E0 /* stocks_test_appApp.swift */; };
 		C3CF9FA22823DB87000BC1E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3CF9FA12823DB87000BC1E0 /* Assets.xcassets */; };
 		C3CF9FA52823DB87000BC1E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3CF9FA42823DB87000BC1E0 /* Preview Assets.xcassets */; };
@@ -16,6 +23,13 @@
 /* Begin PBXFileReference section */
 		37E8EB67D19F3E31BAE8484A /* Pods-stocks-test-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stocks-test-app.debug.xcconfig"; path = "Target Support Files/Pods-stocks-test-app/Pods-stocks-test-app.debug.xcconfig"; sourceTree = "<group>"; };
 		9CBEE2F33F5E2B5ECF79A252 /* Pods_stocks_test_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stocks_test_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3693A022823F4FA00E27A02 /* responseQuotesMonth .json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "responseQuotesMonth .json"; sourceTree = "<group>"; };
+		C3693A032823F4FA00E27A02 /* responseQuotesWeek.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = responseQuotesWeek.json; sourceTree = "<group>"; };
+		C3693A062823F55500E27A02 /* ResponseQuotesWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseQuotesWeek.swift; sourceTree = "<group>"; };
+		C3693A082823F57900E27A02 /* ResponseQuotesMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseQuotesMonth.swift; sourceTree = "<group>"; };
+		C3693A0A2823F59A00E27A02 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		C3693A0C2823F5B100E27A02 /* QuoteSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteSymbol.swift; sourceTree = "<group>"; };
+		C3693A102823F5F400E27A02 /* QuotesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesManager.swift; sourceTree = "<group>"; };
 		C3CF9F9A2823DB85000BC1E0 /* stocks-test-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "stocks-test-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3CF9F9D2823DB85000BC1E0 /* stocks_test_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stocks_test_appApp.swift; sourceTree = "<group>"; };
 		C3CF9FA12823DB87000BC1E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,6 +68,10 @@
 		C36939FB2823DFDF00E27A02 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C3693A062823F55500E27A02 /* ResponseQuotesWeek.swift */,
+				C3693A082823F57900E27A02 /* ResponseQuotesMonth.swift */,
+				C3693A0A2823F59A00E27A02 /* Content.swift */,
+				C3693A0C2823F5B100E27A02 /* QuoteSymbol.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -82,6 +100,7 @@
 		C36939FF2823DFF800E27A02 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				C3693A102823F5F400E27A02 /* QuotesManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -96,6 +115,8 @@
 		C3693A012823E03500E27A02 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C3693A022823F4FA00E27A02 /* responseQuotesMonth .json */,
+				C3693A032823F4FA00E27A02 /* responseQuotesWeek.json */,
 				C3CF9FA12823DB87000BC1E0 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -211,8 +232,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3693A042823F4FA00E27A02 /* responseQuotesMonth .json in Resources */,
 				C3CF9FA52823DB87000BC1E0 /* Preview Assets.xcassets in Resources */,
 				C3CF9FA22823DB87000BC1E0 /* Assets.xcassets in Resources */,
+				C3693A052823F4FA00E27A02 /* responseQuotesWeek.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3693A092823F57900E27A02 /* ResponseQuotesMonth.swift in Sources */,
+				C3693A0D2823F5B100E27A02 /* QuoteSymbol.swift in Sources */,
 				C3CF9F9E2823DB85000BC1E0 /* stocks_test_appApp.swift in Sources */,
+				C3693A072823F55500E27A02 /* ResponseQuotesWeek.swift in Sources */,
+				C3693A112823F5F400E27A02 /* QuotesManager.swift in Sources */,
+				C3693A0B2823F59A00E27A02 /* Content.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
