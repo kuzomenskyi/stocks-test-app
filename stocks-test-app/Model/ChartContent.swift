@@ -22,7 +22,7 @@ class ChartContent: ObservableObject {
     @Published var tooltipValueSuffix = "USD"
     @Published var quoteSymbols: [QuoteSymbol] = []
 
-    lazy var categories: [String] = DateManager.shared.getMonthsTitles()
+    var categories: [String] = []
     
     // MARK: Private Variable
     

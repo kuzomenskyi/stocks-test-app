@@ -63,8 +63,6 @@ struct ChartView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UIViewType, context: Context) {
-        let colorHexStrings = chartContent.quoteSymbols.map { $0.colorHexString }
-        print("colorHexStrings:", colorHexStrings)
         configureChartModel()
         chart.aa_drawChartWithChartModel(chartModel)
     }

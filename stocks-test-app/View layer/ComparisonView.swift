@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AAInfographics
 
 struct ComparisonView: View {
     // MARK: Constant
@@ -22,10 +23,20 @@ struct ComparisonView: View {
         ChartView(chartContent: $monthChartContent, chartModel: .constant(ChartView.getChartModel(forChartContent: monthChartContent)))
             .subscribeForUpdates()
             .onAppear {
-                print("Appeared")
                 quotesManager.getMonthQuotes { monthQuotes in
-                    print("Finished fetching")
                     monthChartContent.quoteSymbols = monthQuotes.content.quoteSymbols
+                    monthChartContent.title = DateManager.shared.getMonthTitle(fromDate: Date())
+                    monthChartContent.subtitle = "Monthly view"
+                    monthChartContent.categories = []
+
+                    if monthChartContent.quoteSymbols.count > 0 {
+                        var categories = [String]()
+                        for day in 1...monthChartContent.quoteSymbols.count {
+                            categories.append("\(day)")
+                        }
+                        
+                        monthChartContent.categories = categories
+                    }
                     NotificationCenter.default.post(name: .didFetchMonthQuotes, object: self)
                 } failureCompletion: { error in
                     errorMessage = error.localizedDescription
