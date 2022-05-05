@@ -11,8 +11,8 @@ class QuotesManager: NSObject {
     // MARK: Constant
     
     // MARK: Private Constant
-    private let monthQuotesURL = Bundle.main.url(forResource: "Resources/responseQuotesMonth", withExtension: "json")!
-    private let weekQuotesURL = Bundle.main.url(forResource: "Resources/responseQuotesWeek", withExtension: "json")!
+    private let monthQuotesURL = Bundle.main.url(forResource: "responseQuotesMonth", withExtension: "json")!
+    private let weekQuotesURL = Bundle.main.url(forResource: "responseQuotesWeek", withExtension: "json")!
     
     // MARK: Variable
     

@@ -18,6 +18,19 @@ struct stocks_test_appApp: App {
         WindowGroup {
             #warning("Insert view here")
             Spacer()
+                .onAppear {
+                    QuotesManager().getMonthQuotes { monthQuotes in
+                        print("Month quotes: \(monthQuotes)")
+                    } failureCompletion: { error in
+                        print("Error while getting month quotes")
+                    }
+                    
+                    QuotesManager().getWeekQuotes { weekQuotes in
+                        print("Week quotes: \(weekQuotes)")
+                    } failureCompletion: { error in
+                        print("Error while getting month quotes")
+                    }
+                }
         }
     }
     
