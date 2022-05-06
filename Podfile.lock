@@ -1,3 +1,21 @@
-PODFILE CHECKSUM: 0419f6da11497307f4e4ba660675831f47e9409a
+PODS:
+  - AAInfographics (6.0.0)
+
+DEPENDENCIES:
+  - AAInfographics (from `https://github.com/AAChartModel/AAChartKit-Swift.git`)
+
+EXTERNAL SOURCES:
+  AAInfographics:
+    :git: https://github.com/AAChartModel/AAChartKit-Swift.git
+
+CHECKOUT OPTIONS:
+  AAInfographics:
+    :commit: bc099ca9d71405372ee078b21c594535f13db395
+    :git: https://github.com/AAChartModel/AAChartKit-Swift.git
+
+SPEC CHECKSUMS:
+  AAInfographics: e57c6cc15ddc17df3555db6f586fb0e1b911a0b7
+
+PODFILE CHECKSUM: d73d9c7cade4dc8ad96e801580f36bcc257ce60a
 
 COCOAPODS: 1.11.3

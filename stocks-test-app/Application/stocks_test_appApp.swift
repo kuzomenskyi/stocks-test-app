@@ -14,10 +14,15 @@ struct stocks_test_appApp: App {
     // MARK: Private Constant
     
     // MARK: Variable
+    
     var body: some Scene {
         WindowGroup {
-            #warning("Insert view here")
-            Spacer()
+            ComparisonView(weekChartContent: ChartContent()
+                            .stockDisplayMode(.openPrices)
+                            .mode(.weekView),
+                           monthChartContent:
+                            ChartContent()
+                            .stockDisplayMode(.openPrices))
         }
     }
     

@@ -8,18 +8,76 @@
 
 /* Begin PBXBuildFile section */
 		1EBF517EB06A98F58D2DC667 /* Pods_stocks_test_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CBEE2F33F5E2B5ECF79A252 /* Pods_stocks_test_app.framework */; };
+		C35EC35C282441C10072A917 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35EC35B282441C10072A917 /* ChartView.swift */; };
+		C35EC35E2824475D0072A917 /* ChartContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35EC35D2824475D0072A917 /* ChartContent.swift */; };
+		C35EC36028244A360072A917 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35EC35F28244A360072A917 /* Date+Ext.swift */; };
+		C35EC36228244AB70072A917 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35EC36128244AB70072A917 /* DateManager.swift */; };
+		C3693A072823F55500E27A02 /* ResponseQuotesWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3693A062823F55500E27A02 /* ResponseQuotesWeek.swift */; };
+		C3693A092823F57900E27A02 /* ResponseQuotesMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3693A082823F57900E27A02 /* ResponseQuotesMonth.swift */; };
+		C3693A0B2823F59A00E27A02 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3693A0A2823F59A00E27A02 /* Content.swift */; };
+		C3693A0D2823F5B100E27A02 /* QuoteSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3693A0C2823F5B100E27A02 /* QuoteSymbol.swift */; };
+		C3693A112823F5F400E27A02 /* QuotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3693A102823F5F400E27A02 /* QuotesManager.swift */; };
+		C3693A142824163F00E27A02 /* responseQuotesMonth.json in Resources */ = {isa = PBXBuildFile; fileRef = C3693A122824163F00E27A02 /* responseQuotesMonth.json */; };
+		C3693A152824163F00E27A02 /* responseQuotesWeek.json in Resources */ = {isa = PBXBuildFile; fileRef = C3693A132824163F00E27A02 /* responseQuotesWeek.json */; };
+		C3693A192824376400E27A02 /* ComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3693A182824376400E27A02 /* ComparisonView.swift */; };
 		C3CF9F9E2823DB85000BC1E0 /* stocks_test_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CF9F9D2823DB85000BC1E0 /* stocks_test_appApp.swift */; };
 		C3CF9FA22823DB87000BC1E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3CF9FA12823DB87000BC1E0 /* Assets.xcassets */; };
 		C3CF9FA52823DB87000BC1E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3CF9FA42823DB87000BC1E0 /* Preview Assets.xcassets */; };
+		C3EB9D8D28245FD200D97F67 /* Notification.Name+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EB9D8C28245FD200D97F67 /* Notification.Name+Ext.swift */; };
+		C3EB9D912824694F00D97F67 /* RandomColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EB9D902824694F00D97F67 /* RandomColorGenerator.swift */; };
+		C3EB9D93282477A900D97F67 /* PercentageCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EB9D92282477A900D97F67 /* PercentageCalculator.swift */; };
+		C3EB9D9B282478B500D97F67 /* stocks_test_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EB9D9A282478B500D97F67 /* stocks_test_appTests.swift */; };
+		C3EB9DA1282478CC00D97F67 /* Date+Ext.swift in Resources */ = {isa = PBXBuildFile; fileRef = C35EC35F28244A360072A917 /* Date+Ext.swift */; };
+		C3EB9DA2282478CC00D97F67 /* Notification.Name+Ext.swift in Resources */ = {isa = PBXBuildFile; fileRef = C3EB9D8C28245FD200D97F67 /* Notification.Name+Ext.swift */; };
+		C3EB9DA3282478CC00D97F67 /* ResponseQuotesWeek.swift in Resources */ = {isa = PBXBuildFile; fileRef = C3693A062823F55500E27A02 /* ResponseQuotesWeek.swift */; };
+		C3EB9DA4282478CC00D97F67 /* ResponseQuotesMonth.swift in Resources */ = {isa = PBXBuildFile; fileRef = C3693A082823F57900E27A02 /* ResponseQuotesMonth.swift */; };
+		C3EB9DA5282478CC00D97F67 /* Content.swift in Resources */ = {isa = PBXBuildFile; fileRef = C3693A0A2823F59A00E27A02 /* Content.swift */; };
+		C3EB9DA6282478CC00D97F67 /* QuoteSymbol.swift in Resources */ = {isa = PBXBuildFile; fileRef = C3693A0C2823F5B100E27A02 /* QuoteSymbol.swift */; };
+		C3EB9DA7282478CC00D97F67 /* ChartContent.swift in Resources */ = {isa = PBXBuildFile; fileRef = C35EC35D2824475D0072A917 /* ChartContent.swift */; };
+		C3EB9DA8282478CC00D97F67 /* QuotesManager.swift in Resources */ = {isa = PBXBuildFile; fileRef = C3693A102823F5F400E27A02 /* QuotesManager.swift */; };
+		C3EB9DA9282478CC00D97F67 /* DateManager.swift in Resources */ = {isa = PBXBuildFile; fileRef = C35EC36128244AB70072A917 /* DateManager.swift */; };
+		C3EB9DAA282478CC00D97F67 /* RandomColorGenerator.swift in Resources */ = {isa = PBXBuildFile; fileRef = C3EB9D902824694F00D97F67 /* RandomColorGenerator.swift */; };
+		C3EB9DAB282478CC00D97F67 /* PercentageCalculator.swift in Resources */ = {isa = PBXBuildFile; fileRef = C3EB9D92282477A900D97F67 /* PercentageCalculator.swift */; };
+		C3EB9DAC282478CC00D97F67 /* responseQuotesMonth.json in Resources */ = {isa = PBXBuildFile; fileRef = C3693A122824163F00E27A02 /* responseQuotesMonth.json */; };
+		C3EB9DAD282478CC00D97F67 /* responseQuotesWeek.json in Resources */ = {isa = PBXBuildFile; fileRef = C3693A132824163F00E27A02 /* responseQuotesWeek.json */; };
+		C3EB9DAF282497F200D97F67 /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EB9DAE282497F200D97F67 /* Array+Ext.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C3EB9D9C282478B500D97F67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3CF9F922823DB85000BC1E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3CF9F992823DB85000BC1E0;
+			remoteInfo = "stocks-test-app";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		37E8EB67D19F3E31BAE8484A /* Pods-stocks-test-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stocks-test-app.debug.xcconfig"; path = "Target Support Files/Pods-stocks-test-app/Pods-stocks-test-app.debug.xcconfig"; sourceTree = "<group>"; };
 		9CBEE2F33F5E2B5ECF79A252 /* Pods_stocks_test_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stocks_test_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C35EC35B282441C10072A917 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		C35EC35D2824475D0072A917 /* ChartContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartContent.swift; sourceTree = "<group>"; };
+		C35EC35F28244A360072A917 /* Date+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		C35EC36128244AB70072A917 /* DateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
+		C3693A062823F55500E27A02 /* ResponseQuotesWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseQuotesWeek.swift; sourceTree = "<group>"; };
+		C3693A082823F57900E27A02 /* ResponseQuotesMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseQuotesMonth.swift; sourceTree = "<group>"; };
+		C3693A0A2823F59A00E27A02 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		C3693A0C2823F5B100E27A02 /* QuoteSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteSymbol.swift; sourceTree = "<group>"; };
+		C3693A102823F5F400E27A02 /* QuotesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesManager.swift; sourceTree = "<group>"; };
+		C3693A122824163F00E27A02 /* responseQuotesMonth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = responseQuotesMonth.json; path = "stocks-test-app/Resources/responseQuotesMonth.json"; sourceTree = SOURCE_ROOT; };
+		C3693A132824163F00E27A02 /* responseQuotesWeek.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = responseQuotesWeek.json; path = "stocks-test-app/Resources/responseQuotesWeek.json"; sourceTree = SOURCE_ROOT; };
+		C3693A182824376400E27A02 /* ComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparisonView.swift; sourceTree = "<group>"; };
 		C3CF9F9A2823DB85000BC1E0 /* stocks-test-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "stocks-test-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3CF9F9D2823DB85000BC1E0 /* stocks_test_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stocks_test_appApp.swift; sourceTree = "<group>"; };
 		C3CF9FA12823DB87000BC1E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3CF9FA42823DB87000BC1E0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C3EB9D8C28245FD200D97F67 /* Notification.Name+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification.Name+Ext.swift"; sourceTree = "<group>"; };
+		C3EB9D902824694F00D97F67 /* RandomColorGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomColorGenerator.swift; sourceTree = "<group>"; };
+		C3EB9D92282477A900D97F67 /* PercentageCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentageCalculator.swift; sourceTree = "<group>"; };
+		C3EB9D98282478B500D97F67 /* stocks-test-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "stocks-test-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3EB9D9A282478B500D97F67 /* stocks_test_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stocks_test_appTests.swift; sourceTree = "<group>"; };
+		C3EB9DAE282497F200D97F67 /* Array+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
 		E8CEA8F222624C17F784BB5C /* Pods-stocks-test-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stocks-test-app.release.xcconfig"; path = "Target Support Files/Pods-stocks-test-app/Pods-stocks-test-app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -29,6 +87,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EBF517EB06A98F58D2DC667 /* Pods_stocks_test_app.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3EB9D95282478B500D97F67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +119,11 @@
 		C36939FB2823DFDF00E27A02 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C3693A062823F55500E27A02 /* ResponseQuotesWeek.swift */,
+				C3693A082823F57900E27A02 /* ResponseQuotesMonth.swift */,
+				C3693A0A2823F59A00E27A02 /* Content.swift */,
+				C3693A0C2823F5B100E27A02 /* QuoteSymbol.swift */,
+				C35EC35D2824475D0072A917 /* ChartContent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -61,6 +131,8 @@
 		C36939FC2823DFE500E27A02 /* View layer */ = {
 			isa = PBXGroup;
 			children = (
+				C3693A182824376400E27A02 /* ComparisonView.swift */,
+				C35EC35B282441C10072A917 /* ChartView.swift */,
 			);
 			path = "View layer";
 			sourceTree = "<group>";
@@ -68,6 +140,9 @@
 		C36939FD2823DFEB00E27A02 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C35EC35F28244A360072A917 /* Date+Ext.swift */,
+				C3EB9DAE282497F200D97F67 /* Array+Ext.swift */,
+				C3EB9D8C28245FD200D97F67 /* Notification.Name+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -82,6 +157,10 @@
 		C36939FF2823DFF800E27A02 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				C3693A102823F5F400E27A02 /* QuotesManager.swift */,
+				C35EC36128244AB70072A917 /* DateManager.swift */,
+				C3EB9D902824694F00D97F67 /* RandomColorGenerator.swift */,
+				C3EB9D92282477A900D97F67 /* PercentageCalculator.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -96,6 +175,8 @@
 		C3693A012823E03500E27A02 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C3693A122824163F00E27A02 /* responseQuotesMonth.json */,
+				C3693A132824163F00E27A02 /* responseQuotesWeek.json */,
 				C3CF9FA12823DB87000BC1E0 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -105,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				C3CF9F9C2823DB85000BC1E0 /* stocks-test-app */,
+				C3EB9D99282478B500D97F67 /* stocks-test-appTests */,
 				C3CF9F9B2823DB85000BC1E0 /* Products */,
 				F6734361B3CA5217FB09EC2D /* Pods */,
 				8F61AD5AFD4983C03D0155EF /* Frameworks */,
@@ -115,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				C3CF9F9A2823DB85000BC1E0 /* stocks-test-app.app */,
+				C3EB9D98282478B500D97F67 /* stocks-test-appTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,6 +226,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		C3EB9D99282478B500D97F67 /* stocks-test-appTests */ = {
+			isa = PBXGroup;
+			children = (
+				C3EB9D9A282478B500D97F67 /* stocks_test_appTests.swift */,
+			);
+			path = "stocks-test-appTests";
+			sourceTree = "<group>";
+		};
 		F6734361B3CA5217FB09EC2D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +254,7 @@
 				C3CF9F962823DB85000BC1E0 /* Sources */,
 				C3CF9F972823DB85000BC1E0 /* Frameworks */,
 				C3CF9F982823DB85000BC1E0 /* Resources */,
+				429D4276C3D09EEB92CBE602 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -172,6 +264,24 @@
 			productName = "stocks-test-app";
 			productReference = C3CF9F9A2823DB85000BC1E0 /* stocks-test-app.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C3EB9D97282478B500D97F67 /* stocks-test-appTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3EB9D9E282478B500D97F67 /* Build configuration list for PBXNativeTarget "stocks-test-appTests" */;
+			buildPhases = (
+				C3EB9D94282478B500D97F67 /* Sources */,
+				C3EB9D95282478B500D97F67 /* Frameworks */,
+				C3EB9D96282478B500D97F67 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3EB9D9D282478B500D97F67 /* PBXTargetDependency */,
+			);
+			name = "stocks-test-appTests";
+			productName = "stocks-test-appTests";
+			productReference = C3EB9D98282478B500D97F67 /* stocks-test-appTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -185,6 +295,10 @@
 				TargetAttributes = {
 					C3CF9F992823DB85000BC1E0 = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					C3EB9D97282478B500D97F67 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = C3CF9F992823DB85000BC1E0;
 					};
 				};
 			};
@@ -202,6 +316,7 @@
 			projectRoot = "";
 			targets = (
 				C3CF9F992823DB85000BC1E0 /* stocks-test-app */,
+				C3EB9D97282478B500D97F67 /* stocks-test-appTests */,
 			);
 		};
 /* End PBXProject section */
@@ -211,14 +326,53 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3693A142824163F00E27A02 /* responseQuotesMonth.json in Resources */,
 				C3CF9FA52823DB87000BC1E0 /* Preview Assets.xcassets in Resources */,
 				C3CF9FA22823DB87000BC1E0 /* Assets.xcassets in Resources */,
+				C3693A152824163F00E27A02 /* responseQuotesWeek.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3EB9D96282478B500D97F67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3EB9DA1282478CC00D97F67 /* Date+Ext.swift in Resources */,
+				C3EB9DA2282478CC00D97F67 /* Notification.Name+Ext.swift in Resources */,
+				C3EB9DA3282478CC00D97F67 /* ResponseQuotesWeek.swift in Resources */,
+				C3EB9DA4282478CC00D97F67 /* ResponseQuotesMonth.swift in Resources */,
+				C3EB9DA5282478CC00D97F67 /* Content.swift in Resources */,
+				C3EB9DA6282478CC00D97F67 /* QuoteSymbol.swift in Resources */,
+				C3EB9DA7282478CC00D97F67 /* ChartContent.swift in Resources */,
+				C3EB9DA8282478CC00D97F67 /* QuotesManager.swift in Resources */,
+				C3EB9DA9282478CC00D97F67 /* DateManager.swift in Resources */,
+				C3EB9DAA282478CC00D97F67 /* RandomColorGenerator.swift in Resources */,
+				C3EB9DAB282478CC00D97F67 /* PercentageCalculator.swift in Resources */,
+				C3EB9DAC282478CC00D97F67 /* responseQuotesMonth.json in Resources */,
+				C3EB9DAD282478CC00D97F67 /* responseQuotesWeek.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		429D4276C3D09EEB92CBE602 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-stocks-test-app/Pods-stocks-test-app-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-stocks-test-app/Pods-stocks-test-app-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-stocks-test-app/Pods-stocks-test-app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5804C822BCCC68741390F408 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -248,11 +402,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3EB9D8D28245FD200D97F67 /* Notification.Name+Ext.swift in Sources */,
+				C3EB9D93282477A900D97F67 /* PercentageCalculator.swift in Sources */,
+				C3693A192824376400E27A02 /* ComparisonView.swift in Sources */,
+				C3693A092823F57900E27A02 /* ResponseQuotesMonth.swift in Sources */,
+				C3693A0D2823F5B100E27A02 /* QuoteSymbol.swift in Sources */,
+				C35EC35E2824475D0072A917 /* ChartContent.swift in Sources */,
 				C3CF9F9E2823DB85000BC1E0 /* stocks_test_appApp.swift in Sources */,
+				C3EB9D912824694F00D97F67 /* RandomColorGenerator.swift in Sources */,
+				C3693A072823F55500E27A02 /* ResponseQuotesWeek.swift in Sources */,
+				C3693A112823F5F400E27A02 /* QuotesManager.swift in Sources */,
+				C35EC36228244AB70072A917 /* DateManager.swift in Sources */,
+				C3693A0B2823F59A00E27A02 /* Content.swift in Sources */,
+				C3EB9DAF282497F200D97F67 /* Array+Ext.swift in Sources */,
+				C35EC35C282441C10072A917 /* ChartView.swift in Sources */,
+				C35EC36028244A360072A917 /* Date+Ext.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3EB9D94282478B500D97F67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3EB9D9B282478B500D97F67 /* stocks_test_appTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C3EB9D9D282478B500D97F67 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3CF9F992823DB85000BC1E0 /* stocks-test-app */;
+			targetProxy = C3EB9D9C282478B500D97F67 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C3CF9FA62823DB87000BC1E0 /* Debug */ = {
@@ -431,6 +615,42 @@
 			};
 			name = Release;
 		};
+		C3EB9D9F282478B500D97F67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P7RXT83R75;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "vladimir-kuzomenskyi.stocks-test-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stocks-test-app.app/stocks-test-app";
+			};
+			name = Debug;
+		};
+		C3EB9DA0282478B500D97F67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P7RXT83R75;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "vladimir-kuzomenskyi.stocks-test-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stocks-test-app.app/stocks-test-app";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -448,6 +668,15 @@
 			buildConfigurations = (
 				C3CF9FA92823DB87000BC1E0 /* Debug */,
 				C3CF9FAA2823DB87000BC1E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3EB9D9E282478B500D97F67 /* Build configuration list for PBXNativeTarget "stocks-test-appTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3EB9D9F282478B500D97F67 /* Debug */,
+				C3EB9DA0282478B500D97F67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

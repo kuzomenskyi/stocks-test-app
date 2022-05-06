@@ -6,5 +6,5 @@ target 'stocks-test-app' do
   use_frameworks!
 
   # Pods for stocks-test-app
-
+  pod 'AAInfographics', :git => 'https://github.com/AAChartModel/AAChartKit-Swift.git'
 end
