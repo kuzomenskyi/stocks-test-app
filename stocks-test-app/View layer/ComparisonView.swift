@@ -149,7 +149,6 @@ struct ComparisonView: View {
             }
 
         }
-        #warning("Add week ChartView")
     }
     
     // MARK: Private Variable
